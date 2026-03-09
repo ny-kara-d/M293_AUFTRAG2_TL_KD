@@ -1,0 +1,250 @@
+body {
+    display: grid;
+    background-color: darkslategrey;
+}
+
+.title {
+    justify-self: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: auto;
+    margin-top: 25px;
+}
+
+.navbar {
+    justify-self: right;
+    margin-right: 10px;
+    padding: 0;
+}
+
+.navbar a {
+    color: lightpink;
+}
+
+.carousel {
+  box-sizing: border-box;
+  justify-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.carousel img {
+    height: 480px;
+    width: auto;
+    align-self: center;
+}
+
+body {
+    margin: 0;
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+}
+
+ul {
+    justify-self: center;
+    width: 800px;
+    height: 600px;
+    padding: 20px;
+    display: flex;
+    gap: 4vw;
+}
+
+li {
+    justify-items: center;
+    list-style-type: none;
+    padding: 10px;
+}
+
+ul {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+ul::-webkit-scrollbar {
+    display: none;                
+}
+
+li {
+    scroll-snap-align: center;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    padding: none;
+}
+
+i {
+    font-size: small;
+}
+
+.articles {
+    display: grid;
+    width: 830px;
+    justify-self: center;
+    text-align: left;
+}
+
+.grids {
+    display: grid;
+    width: 500px;
+    justify-self: right;
+    grid-template-columns: auto;
+    padding: 5px;
+}
+
+.videos {
+    display: grid;
+    justify-self: center;
+    height: auto;
+}
+/*
+.carousel h1 {
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.carousel h2 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+.carousel ul {
+    width: 100vw;
+    height: 300px;
+    padding: 10px;
+
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    columns: 1;
+    text-align: center;
+}
+
+.carousel li {
+    scroll-snap-align: center;
+    list-style-type: none;
+    flex: 0 0 450px; 
+    justify-content: center;
+    height: 100%;
+    width: 450px;
+    padding: 20px;
+    margin: 0 10px;
+
+    text-align: center;
+}
+
+.carousel li:nth-child(even) {
+  background-color: none;
+}
+
+.carousel ul::column {
+  scroll-snap-align: center;
+}
+
+.carousel ul::scroll-button(*) {
+  border: 0;
+  font-size: 2rem;
+  background: none;
+  color: black;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.carousel ul::scroll-button(*):hover,
+.carousel ul::scroll-button(*):focus {
+  opacity: 1;
+}
+
+.carousel ul::scroll-button(*):active {
+  translate: 1px 1px;
+}
+
+.carousel ul::scroll-button(*):disabled {
+  opacity: 0.2;
+  cursor: unset;
+}
+
+.carousel ul::scroll-button(left) {
+  content: "◄";
+}
+
+.carousel ul::scroll-button(right) {
+  content: "►";
+}
+
+
+.carousel ul {
+  anchor-name: --my-carousel;
+}
+
+.carousel ul::scroll-button(*) {
+  position: absolute;
+  position-anchor: --my-carousel;
+}
+
+.carousel ul::scroll-button(left) {
+  right: calc(anchor(left) - 70px);
+  bottom: calc(anchor(top) + 13px);
+}
+
+.carousel ul::scroll-button(right) {
+  left: calc(anchor(right) - 70px);
+  bottom: calc(anchor(top) + 13px);
+}
+
+
+.carousel ul {
+  scroll-marker-group: after;
+}
+
+
+.carousel ul::scroll-marker-group {
+  position: absolute;
+  position-anchor: --my-carousel;
+  top: calc(anchor(bottom) - 70px);
+  justify-self: anchor-center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.carousel ul::column::scroll-marker {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.carousel ul::column::scroll-marker:target-before {
+  border: 2px solid gray;
+}
+
+.carousel ul::column::scroll-marker:target-current {
+  background-color: black;
+  transition: all 0.7s;
+}
+
+.carousel ul::column::scroll-marker:target-after {
+  border: 2px solid red;
+  background-color: red;
+}
