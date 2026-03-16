@@ -3,6 +3,12 @@ body {
     /*background-color: darkslategrey;*/
 }
 
+/* Für die von splitText erstellten Buchstaben-Span-Elemente */
+.anime-split-text__char {
+    display: inline-block; /* Wichtig für Transformationen wie scale und rotate */
+    white-space: pre;      /* Behält Leerzeichen bei */
+    will-change: transform, color; /* Gibt dem Browser einen Hinweis für flüssigere Animation */
+}
 
 
 
