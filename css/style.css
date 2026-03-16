@@ -90,16 +90,22 @@ i {
     font-size: small;
 }
 
+article {
+    display: grid;
+    float: left;
+}
+
 .articles {
     display: grid;
-    width: 830px;
+    width: 700px;
     justify-self: center;
     text-align: left;
 }
 
 .grids {
     display: grid;
-    width: 500px;
+    float: right;
+    width: 300px;
     justify-self: right;
     grid-template-columns: auto;
     padding: 5px;
@@ -107,6 +113,7 @@ i {
 
 .videos {
     display: grid;
+    margin-left: 285px;
     justify-self: center;
     height: auto;
 }
@@ -248,3 +255,4 @@ i {
   border: 2px solid red;
   background-color: red;
 }
+
