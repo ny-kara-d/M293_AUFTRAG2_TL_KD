@@ -1,15 +1,12 @@
-// Warte, bis das HTML-Dokument vollständig geladen ist
+// NUR JAVASCRIPT, KEIN CSS HIER!
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("Animation.js geladen!"); // Test: Siehst du das in der Konsole?
+    console.log("Animation.js geladen!");
     
-    // Wähle alle h2 und h3 Elemente aus
     const titles = document.querySelectorAll('h2, h3');
-    console.log("Gefundene Titel:", titles.length); // Wie viele Titel wurden gefunden?
+    console.log("Gefundene Titel:", titles.length);
     
-    // Für jede gefundene Überschrift...
     titles.forEach(function(title) {
         try {
-            // Text mit splitText aufteilen
             const split = anime.splitText(title, {
                 chars: true,
                 words: true,
@@ -18,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             console.log("Split erfolgreich für:", title.textContent);
             
-            // Animation erstellen (einfache Version ohne Timeline)
             anime.createAnimation({
                 targets: split.chars,
                 scale: [1, 1.2, 1],
