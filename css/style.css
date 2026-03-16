@@ -1,6 +1,6 @@
 body {
     display: grid;
-    background-color: darkslategrey;
+    /*background-color: darkslategrey;*/
 }
 
 .title {
@@ -47,7 +47,7 @@ h1 {
 
 h2 {
     text-align: center;
-    color: black;
+    /*color: black;*/
 }
 
 ul {
