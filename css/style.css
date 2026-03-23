@@ -265,3 +265,22 @@ article {
   background-color: red;
 }
 
+/* Animation für die Buchstaben */
+h2, h3 {
+    position: relative;
+}
+
+h2 span, h3 span {
+    display: inline-block;
+    white-space: pre;
+}
+
+/* Optional: Hover-Effekt */
+h2:hover span, h3:hover span {
+    animation: horrorPulse 0.5s ease infinite alternate;
+}
+
+@keyframes horrorPulse {
+    from { transform: scale(1); color: #ff6b6b; }
+    to { transform: scale(1.1); color: #ff0000; }
+}
